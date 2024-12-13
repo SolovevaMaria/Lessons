@@ -119,6 +119,7 @@ public static char[] myTrim(char[] arr ){
         System.out.println(myToLowerCase(arr));
         System.out.println(myTrim(arr));
         System.out.println(myCharAt(arr,5));
+       
         
 
     }
