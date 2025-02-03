@@ -37,12 +37,18 @@ class MyList {
                 arr[newSize++] = arr[i];
             }
         }
+        for(int i = newSize; i < size; i++){
+            arr[i] = 0;
+        }
         size = newSize;
     }
 
-    public void removeByIndex(int index) {
+    public void removeByIndex (int index) {
         for (int i = index; i < size - 1; i++) {
             arr[i] = arr[i + 1];
+        }
+        if (size > 0) {
+            arr[size - 1] = 0;
         }
         size--;
     }
@@ -63,7 +69,7 @@ class MyList {
         }
 
     }
-}
+    }
 public class Main {
 
     public static void main(String[] args) {
@@ -77,15 +83,17 @@ public class Main {
         myList.add(4);
         myList.add(3);
         myList.add(7);
-         myList.capacity();
-       
-         myList.size();
+        myList.print();
+        System.out.println();
+        System.out.println( myList.isHasValue(3));
+        System.out.println();
 
-         myList.isHasValue(3);
-
-         myList.removeByIndex(4);
-
-         myList.removeByValue(7);
-
+       myList.removeByValue(5);
+        System.out.print("Измененный массив : ");
+        myList.print();
+        System.out.println();
+        myList.removeByIndex(2);
+        System.out.print("Измененный массив : ");
+        myList.print();
     }
     }
