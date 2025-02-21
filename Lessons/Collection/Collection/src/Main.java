@@ -85,121 +85,117 @@ class MyList {
         return size == 0;
     }
 
-    public int addAll(int index, MyList myList) {
-        if (myList==null || myList.size ==0) return;
+    public void addAll(int index, MyList myList) {
+        if (myList == null || myList.size == 0) return;
 
-        if (index<0){
+        if (index < 0) {
             index = 0;
         }
         for (int i = 0; i < myList.size; i++) {
-            addByIndex(index+i,myList.arr[i]);
+            addByIndex(index + i, myList.arr[i]);
         }
-
-        public void clear() {
-            for (int i = 0; i < size; i++) {
-                arr[i] = 0;
-            }
-            size = 0;
-        }
-
-        public boolean isHasValue(int value) {
-            for (int i = 0; i < size; i++) {
-                if (arr[i] == value) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public int indexOf(int value) {
-            for (int i = 0; i < size; i++) {
-                if (arr[i] == value) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        public void removeByIndex(int index){
-            for (int i = index; i < size - 1; i++) {
-                arr[i] = arr[i + 1];
-            }
-            if (size > 0) {
-                arr[size - 1] = 0;
-            }
-            size--;
-        }
-
-        public void removeByValue(int value){
-            int newSize = 0;
-            for (int i = 0; i < size; i++) {
-                if (arr[i] != value) {
-                    arr[newSize++] = arr[i];
-                }
-            }
-            for(int i = newSize; i < size; i++){
-                arr[i] = 0;
-            }
-            size = newSize;
-        }
-
-        public void addAll(Integer[] arr)  {
-            if (arr == null || arr.length == 0) {
-                return;
-            }
-            for(int i = 0; i < arr.length; i++){
-                Integer value = arr[i];
-                if (value != null) {
-                    add(value);
-                }
-            }
-        }
-
-
-        public void removeAllDuplikat(){
-            for (int i = 0; i < size; i++) {
-                for (int j = i + 1; j < size; j++) {
-                    if (arr[i] == arr[j]) {
-                        removeByIndex(j);
-                        j--;
-                    }
-                }
-            }
-        }
-
-        public void decreaseArr(){
-            if (size == 0) {
-                capacity = 10;
-                arr = new int[capacity];
-                return;
-            }
-            int newCapacity = size;
-            if (newCapacity < 10) {
-                newCapacity = 10;
-            }
-            capacity = newCapacity;
-            int[] newArr = new int[capacity];
-            for (int i = 0; i < Math.min(arr.length, capacity); i++) {
-                newArr[i] = arr[i];
-            }
-            arr = newArr;
-        }
-
-        public void print() {
-            System.out.print("[");
-            for (int i = 0; i < size; i++) {
-                System.out.print(arr[i]);
-                if (i < size - 1) {
-                    System.out.print(", ");
-                }
-            }
-            System.out.println("]");
-
     }
 
 
-}
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            arr[i] = 0;
+        }
+        size = 0;
+    }
 
+    public boolean isHasValue(int value) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int indexOf(int value) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+    public void removeByIndex(int index) {
+        for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        if (size > 0) {
+            arr[size - 1] = 0;
+        }
+        size--;
+    }
+
+    public void removeByValue(int value) {
+        int newSize = 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] != value) {
+                arr[newSize++] = arr[i];
+            }
+        }
+        for (int i = newSize; i < size; i++) {
+            arr[i] = 0;
+        }
+        size = newSize;
+    }
+
+    public void addAll(Integer[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            Integer value = arr[i];
+            if (value != null) {
+                add(value);
+            }
+        }
+    }
+
+
+    public void removeAllDuplikat() {
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (arr[i] == arr[j]) {
+                    removeByIndex(j);
+                    j--;
+                }
+            }
+        }
+    }
+
+    public void decreaseArr() {
+        if (size == 0) {
+            capacity = 10;
+            arr = new int[capacity];
+            return;
+        }
+        int newCapacity = size;
+        if (newCapacity < 10) {
+            newCapacity = 10;
+        }
+        capacity = newCapacity;
+        int[] newArr = new int[capacity];
+        for (int i = 0; i < Math.min(arr.length, capacity); i++) {
+            newArr[i] = arr[i];
+        }
+        arr = newArr;
+    }
+
+    public void print() {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
@@ -222,31 +218,30 @@ public class Main {
         list.add(2);
         list.add(4);
         list.add(3);
-
-        System.out.print("Initial list: ");
-        list.print(); 
-
-        System.out.println("есть ли указанное число? " + list.isHasValue());
+        list.print();
+        System.out.println();
+      
 
         list.removeByIndex(1);
         list.print();
+
         list.removeByValue(3);
+        System.out.println();
 
         Integer[] arrayToAdd = {5, 6, 7};
         list.addAll(arrayToAdd);
-        System.out.print("List after addAll(arrayToAdd): ");
+        
         list.print();
-
+        System.out.println();
 
         list.removeAllDuplikat();
         list.print();
-
+        System.out.println();
         list.decreaseArr();
         list.print();
-
+        System.out.println();
         list.clear();
         list.print();
 
     }
     }
-}

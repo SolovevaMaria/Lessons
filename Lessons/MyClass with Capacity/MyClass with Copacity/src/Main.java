@@ -68,6 +68,26 @@ class MyList {
             System.out.print(arr[i] + " ");
         }
 
+        public void decreaseArr(){
+            if (size == 0) {
+                capacity = 10;
+                arr = new int[capacity];
+                return;
+            }
+            int newCapacity = size;
+            if (newCapacity < 10) {
+                newCapacity = 10;
+            }
+            capacity = newCapacity;
+            int[] newArr = new int[capacity];
+            for (int i = 0; i < Math.min(arr.length, capacity); i++) {
+                newArr[i] = arr[i];
+            }
+            arr = newArr;
+        }
+
+       
+
     }
     }
 public class Main {
