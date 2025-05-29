@@ -1,0 +1,56 @@
+.abzac{
+  color: #000; 
+}
+.pronunciation {
+            font-style: italic;
+            color: #000;
+            margin-bottom: 1em;
+        }
+
+        .category {
+            font-weight: bold;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+
+        li {
+            margin-bottom: 0.8em;
+            color: #000;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin-left: 20px;
+        }
+
+        .synonyms {
+            color: rgb(106, 102, 182);
+            font-size: 0.9em;
+        }
+
+        .synonyms::before {
+            content: "synonyms: ";
+            color: #000;
+            font-weight: bold;
+        }
+
+        dl {
+            margin-left: 20px;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        dd {
+            margin-left: 20px;
+        }

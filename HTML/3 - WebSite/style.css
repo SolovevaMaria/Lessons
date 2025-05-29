@@ -1,0 +1,56 @@
+.background{
+  background-color: rgb(128, 128, 128);  
+   padding: 10px; 
+   width: 500px; 
+   margin: 0; 
+   list-style-position: inside;
+   border-radius: 5px;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+   
+}
+
+
+img{
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+a:hover {
+    background-color: rgb(206, 196, 190);
+    padding: 10px; 
+   width: 450px; 
+}
+
+.element{
+    padding: 10px;
+    margin: 0px;
+    width: 250px;
+    padding: 0;
+    
+}
+
+.number{
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 5px;
+    letter-spacing: 1px;
+}
+
+.text{
+    color: white;
+    padding: 10px;
+    margin: 0px 0;
+    display: flex; 
+    width: 450px;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+

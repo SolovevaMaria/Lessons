@@ -1,0 +1,54 @@
+.background{
+  background-color: rgb(245, 245, 245);  
+   padding: 10px; 
+   width: 500px; 
+   margin: 0; 
+   list-style-position: inside;
+}
+
+img{
+    margin-right: 10px;
+}
+.element{
+    padding: 10px;
+    margin: 0px;
+    width: 250px;
+     padding: 0;
+    
+}
+.number{
+    margin-left: 5px;
+    letter-spacing: 1px;
+}
+.text2{
+
+    padding: 10px;
+    margin: 0px 0;
+    display: flex; 
+    width: 450px;
+    letter-spacing: 1px;
+    background-color: rgb(226, 226, 226);
+}
+.text1{
+    padding: 10px;
+    margin: 0px 0;
+    display: flex; 
+    width: 450px;
+    letter-spacing: 1px;
+    background-color: rgb(165, 204, 218);
+}
+.text3{
+    padding: 10px;
+    margin: 0px 0;
+    display: flex; 
+    width: 450px;
+    letter-spacing: 1px;
+    background-color: rgb(173, 216, 230);
+}
+.cross{
+    color: rgb(202, 91, 85);
+    margin: 0 10px;
+    cursor: pointer;
+
+}
+
