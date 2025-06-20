@@ -1,0 +1,16 @@
+.box {
+    width: 150px;
+    height: 150px;
+    font-size: 45px;
+    background-color:rgb(55, 185, 243) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    transition: 500ms;
+    position: absolute;
+}
+
+body {
+    margin: 0px;
+}

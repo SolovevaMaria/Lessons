@@ -1,0 +1,93 @@
+ body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: white; 
+    color: #333;
+}
+.navbar {
+    
+     padding: 10px 0;
+     background-color: rgb(27, 85, 137)!important; 
+}
+ 
+
+.container-fluid {
+  display: flex;            
+  justify-content: space-between; 
+  align-items: center;        
+  padding: 0 15px;            
+}
+
+.nav-container{
+    display:flex;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav-link {
+  padding: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.user-photo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.text-center{
+     padding: 10px;
+}
+
+
+.Avatar{
+    max-width: 150px;
+  border-radius: 50%;
+  
+}
+
+.button-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn{
+    width:420px;
+}
+
+ .text {
+   display: flex;          
+   justify-content: space-around;  
+   background-color: rgb(204, 229, 255);
+   padding: 10px;
+   margin-bottom: 20px;
+ }
+
+ .text h5 {
+   margin: 0;  
+   color: rgb(100, 133, 185);            
+ }
+
+
+ .profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  max-width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.button-container {
+  margin-top: 10px;
+  text-align: center;
+}
+ 
