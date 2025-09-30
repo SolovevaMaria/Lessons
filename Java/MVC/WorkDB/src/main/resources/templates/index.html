@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+
+    <style>
+        table {
+            font-size: 30px;
+        }
+
+        a,button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 5px black;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .addAll{
+            background-color: green;
+        }
+        .clear{
+            background-color: red;
+        }
+
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a class="addAll" th:href="@{/api/teacher/addAuthor}">Add All</a>
+    <a class="clear" th:href="@{/api/teacher/clear}">Clear</a>
+</div>
+<hr>
+<table th:if="${teachers.size()!=0}" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Btns</th>
+    </tr>
+    <tr th:each="t , status : ${teachers}">
+        <td th:text="${t.getId()}"></td>
+        <td th:text="${t.getFirstName()}"></td>
+        <td th:text="${t.getLastName()}"></td>
+        <td th:text="${t.getAge()}"></td>
+        <td >
+            <div class="container">
+<!--                <a th:href="@{/api/teacher/delete/{id}(id=${t.getId()})}" class="del clear">Remove</a>-->
+                <form onsubmit="return confirm('Vi uvereni cto xotite udalit?')" class="del" th:action="@{/api/teacher/delete/{id}(id=${t.getId()})}" method="post" >
+                    <input type="hidden" name="_method" value="delete">
+                    <button class="del" type="submit">Delete</button>
+                </form>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<h1 th:unless="${teachers.size()!=0}">Teachers empty</h1>
+
+
+<script>
+    console.log('hELO WORLD')
+</script>
+<!--<h1 th:text="${sms}"></h1>-->
+<!--<h1 th:text="${name}"></h1>-->
+<!--<h1 th:text="${vakue}"></h1>-->
+
+<!--<h1 th:text="${tags[0]}"></h1>-->
+<!--<h1 th:text="${tags[1]}"></h1>-->
+<!--<h1 th:text="${tags[2]}"></h1>-->
+<!--<h1 th:text="${tags[3]}"></h1>-->
+<!--<h1 th:text="${tags[4]}"></h1>-->
+<!--<h1 th:text="${tags[5]}"></h1>-->
+<!--<h1 th:text="${tags[6]}"></h1>-->
+
+
+<!--<ul>-->
+<!--    <li th:each="t : ${tags}" th:text="${t}"></li>-->
+<!--</ul>-->
+
+<!--<script>-->
+<!--    alert("Hello world!");-->
+<!--</script>-->
+
+
+<!--<h1 th:text="${person.getFirstName()}"></h1>-->
+<!--<h1 th:text="${person.getLastName()}"></h1>-->
+<!--<h1 th:text="${person.getAge()}"></h1>-->
+
+<!--<table border="1">-->
+<!--    <tr>-->
+<!--        <th>#</th>-->
+<!--        <th>Id</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Surname</th>-->
+<!--        <th>Age</th>-->
+<!--    </tr>-->
+<!--    <tr th:each="person , status : ${people}">-->
+<!--        <td th:text="${status.index + 1}"></td>-->
+<!--        <td th:text="${person.getId()}"></td>-->
+<!--        <td th:text="${person.getFirstName()}"></td>-->
+<!--        <td th:text="${person.getLastName()}"></td>-->
+<!--        <td th:text="${person.getAge()}"></td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+
+<!--<h1 th:if="${person!=null}" > Привет  <span th:text="${person.getFirstName()}"></span></h1>-->
+<!--<h1 th:unless="${person!=null}" > No name   </span></h1>-->
+
+<!--<h1 th:if="${person!=null}" > Привет  <span th:text="${person.getFirstName()}"></span></h1>-->
+<!--<h1 th:if="${person==null}" > No name   </span></h1>-->
+
+
+<!--<h1 th:if="${person!=null and person.getFirstName()!=null or person.getAge() > 18}  " > Привет  <span th:text="${person.getFirstName()}"></span></h1>-->
+<!--<h1 th:if="${person==null}" > No name   </span></h1>-->
+
+
+<!--<span th:text="${person.getAge() < 10 ? 'Child' : 'Parent'}"></span>-->
+
+
+<!--<div th:if="${person!=null and person.getIsMan()}">-->
+<!--    Man-->
+<!--</div>-->
+<!--<div th:unless="${person!=null and person.getIsMan()}">-->
+<!--    Woman-->
+<!--</div>-->
+<!--<p th:if="${person.getTypeUser() == 'ADMIN'}">Welcome Admin</p>-->
+<!--<p th:if="${person.getTypeUser() == 'USER'}">Welcome USER</p>-->
+<!--<p th:if="${person.getTypeUser() == 'MODERATOR'}">Welcome MODERATOR</p>-->
+<!--
+13:45
+-->
+
+<!--<div th:switch="${person.getTypeUser()}">-->
+<!--    <p th:case="'ADMIN'">This is Boss</p>-->
+<!--    <p th:case="'USER'">This is USER</p>-->
+<!--    <p th:case="'MODERATOR'">This is MODERATOR</p>-->
+<!--    <p th:case="*">I dont know</p>-->
+<!--</div>-->
+
+<!--<p th:if="${person.getTypeUser() == 'ADMIN'}">Welcome Admin</p>-->
+<!--<p th:if="${person.getTypeUser() == 'USER'}">Welcome USER</p>-->
+<!--<p th:if="${person.getTypeUser() == 'MODERATOR'}">Welcome MODERATOR</p>-->
+<!--<table border="1">-->
+<!--        <tr>-->
+<!--            <th>#</th>-->
+<!--            <th>Id</th>-->
+<!--            <th>Name</th>-->
+<!--            <th>Surname</th>-->
+<!--            <th>Age</th>-->
+<!--        </tr>-->
+<!--    <tr th:each="person , status : ${people}">-->
+<!--        <td th:text="${status.index + 1}"></td>-->
+<!--        <td th:text="${status.first}"></td>-->
+<!--        <td th:text="${status.last}"></td>-->
+<!--        <td th:text="${status.even}"></td>-->
+<!--        <td th:text="${status.size}"></td>-->
+<!--        <td th:text="${person.getId()}"></td>-->
+<!--        <td th:text="${person.getFirstName()}"></td>-->
+<!--        <td th:text="${person.getLastName()}"></td>-->
+<!--        <td th:text="${person.getAge()}"></td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!--<tr th:each="e : ${people}">-->
+<!--    <td th:text="${e.key}"></td>-->
+<!--    <td th:text="${e.value}"></td>-->
+<!--</tr>-->
+
+<!--<input th:value="${user!=null ? user.name : 'Qost'}">-->
+
+
+<!--<ol>-->
+<!--    <li th:each="n : ${#numbers.sequence(0,100,10)}" th:text="${n}"></li>-->
+<!--</ol>-->
+
+
+</body>
+</html>

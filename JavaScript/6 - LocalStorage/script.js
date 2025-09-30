@@ -6,18 +6,56 @@ let btnSelectedRemove = document.querySelector('#btnSelectedRemove');
 let selectedItems = [];
 let doneItems = [];
 
-// Функция для обновления состояния кнопок
 function updateButtonsState() {
     btnDeleteAll.disabled = myList.children.length === 0;
     btnSelectedRemove.disabled = doneItems.length === 0;
+     saveToLocalStorage();
 }
 
-// Функция для подсчета зеленых элементов
 function countDoneItems() {
     doneItems = Array.from(myList.querySelectorAll('.done-item'));
+     saveToLocalStorage();
 }
 
-// Обработка кнопки Delete All
+function saveToLocalStorage() {
+    const items = Array.from(myList.children).map(item => {
+        return {
+            title: item.querySelector('.content').innerText,
+            done: item.classList.contains('done-item'),
+            selected: selectedItems.includes(item)
+        };
+    });
+    localStorage.setItem('todoList', JSON.stringify(items));
+}
+
+function loadFromLocalStorage() {
+    const items = JSON.parse(localStorage.getItem('todoList')) || [];
+    items.forEach(item => {
+        const newItem = `
+            <div class="list-group-item list-group-item-action item ${item.done ? 'done-item' : ''}">
+                <div class="content">
+                    ${item.title}
+                </div>
+                <div class="btns">
+                    <div class="done">
+                        ✔
+                    </div>
+                    <div class="remove">
+                        ❌
+                    </div>
+                </div>
+            </div>
+        `;
+        myList.innerHTML += newItem;
+        if (item.selected) {
+            selectedItems.push(myList.lastElementChild);
+        }
+    });
+    countDoneItems();
+    updateButtonsState();
+}
+
+
 btnDeleteAll.addEventListener('click', () => {
     myList.innerHTML = '';
     selectedItems = [];
@@ -25,7 +63,6 @@ btnDeleteAll.addEventListener('click', () => {
     updateButtonsState();
 });
 
-// Обработка кнопки Selected Remove
 btnSelectedRemove.addEventListener('click', () => {
     doneItems.forEach(item => item.remove());
     doneItems = [];
@@ -33,7 +70,6 @@ btnSelectedRemove.addEventListener('click', () => {
     updateButtonsState();
 });
 
-// Обработка формы
 myForm.addEventListener('submit', (event) => {
     event.preventDefault();
     
@@ -63,7 +99,6 @@ myForm.addEventListener('submit', (event) => {
     myForm.reset();
 });
 
-// Обработка кликов в списке
 myList.addEventListener('click', (event) => {
     if (event.target.classList.contains('remove')) {
         event.target.parentElement.parentElement.remove();
@@ -85,5 +120,7 @@ myList.addEventListener('click', (event) => {
     }
 });
 
-// Инициализация состояния кнопок
-updateButtonsState();
+window.addEventListener('load', () => {
+    loadFromLocalStorage();
+    updateButtonsState();
+});
