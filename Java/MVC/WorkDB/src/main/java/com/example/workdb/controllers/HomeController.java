@@ -31,6 +31,13 @@ public class HomeController {
     @Autowired
     private Faker faker;
 
+
+    @GetMapping("/farid")
+    public List<String> getAllFarid(
+    ) {
+//        return teacherRepository.skubidu("mo");
+        return List.of("Hello World");
+    }
     // Метод для получения списка с сортировкой
     @GetMapping("/list")
     public String hi(Model model,

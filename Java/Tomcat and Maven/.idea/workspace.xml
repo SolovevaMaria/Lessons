@@ -5,355 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9978f3f6-da73-4554-a78a-746e818845b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Arrays/Arrays/Arrays.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Behavioral patterns/Template Method/Template Method.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Behavioral patterns/Visitor/Visitor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Bubble sort/bubble sort/bubble sort.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Class/Class/Class.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Classwork/Game/Game.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Classwork2/Classwork2/Classwork2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Collection/Collection/Collection.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Creational patterns/Abstract/Abstract.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Creational patterns/factory/factory.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Enums/Enums/Enums.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exam work/Exam work/Exam work.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/Exceptions/Exceptions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions2/Exceptions2/Exceptions2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../File/File/File.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../For/For/For.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Generics/Generics/Generics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HashSet/HashSet/HashSet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interface/Interface/Interface.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JPA Repositories/.idea/JPA Repositories.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JPA Repositories/WorkDB/src/main/java/com/example/workdb/DTOs/PersonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JPA Repositories/WorkDB/src/main/java/com/example/workdb/DTOs/PersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JPA Repositories/WorkDB/src/main/java/com/example/workdb/DTOs/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JPA Repositories/WorkDB/src/main/java/com/example/workdb/entities/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JUnit/.idea/JUnit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JUnit/WorkDB/src/main/java/com/example/workdb/books/book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JUnit/WorkDB/src/test/java/com/example/workdb/controllers/BookControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lambda/Lambda/Lambda.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Map/Map/Map.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Method/Method/Method.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Multi Arrays/Multi Arrays/Multi Arrays.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../My LinkedList/My LinkedList/My LinkedList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../My LinkedList2/My LinkedList2/My LinkedList2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyClass with Capacity/MyClass with Copacity/MyClass with Copacity.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyClass/MyClass/MyClass.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP/OOP/OOP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP_2/OOP_2/OOP_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recursive/Recursive/Recursive.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repositories/.idea/54 - Relations.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RestTemplate/.idea/50 - RestTemplate.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Scheduler/.idea/Scheduler.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamApi/StreamApi/StreamApi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../String/String/String.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../String/untitled/untitled.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../String2/String2/String2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Structural patterns/Flyweight/Flyweight.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Structural patterns/Proxy/Proxy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Thread/Thread/Thread.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Thread2/Thread2/Thread2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Tomcat and Maven.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Whele.Do while/While/While.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Work with Db/.idea/demo (2).iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WorkWithDb-2/.idea/53 - WorkWithDb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WriteRead/WriteRead/WriteRead.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../replaceAll/replaceAll/replaceAll.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaScript/6 - LocalStorage/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaScript/6 - LocalStorage/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/.vs/Solution1/v15/.ssms_suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/Arrays.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Arrays/Arrays/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/bubble sort.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Bubble sort/bubble sort/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/Class.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Class/Class/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/Game.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork/Game/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/Classwork2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Classwork2/Classwork2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/Collection.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Collection/Collection/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/Enums.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Enums/Enums/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/Exam work.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/activity.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/contacts.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/contacts.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/contacts_20250409121208.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/memories/users" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/memories/Мария1903.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/memories/мария.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exam work/Exam work/users/12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/Exceptions.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions/Exceptions/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/Exceptions2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Exceptions2/Exceptions2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/File.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/file1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/File/File/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/For.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/For/For/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/Generics.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Generics/Generics/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/HashSet.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/HashSet/HashSet/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/Interface.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Interface/Interface/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/Lambda.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Lambda/Lambda/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/Map.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Map/Map/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/Method.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Method/Method/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/Multi Arrays.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Multi Arrays/Multi Arrays/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/My LinkedList.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList/My LinkedList/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/My LinkedList2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/My LinkedList2/My LinkedList2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/MyClass with Copacity.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass with Capacity/MyClass with Copacity/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/MyClass.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/MyClass/MyClass/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/OOP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP/OOP/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/OOP_2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/OOP_2/OOP_2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/Recursive.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Recursive/Recursive/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/StreamApi.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/StreamApi/StreamApi/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/String.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/String/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String/untitled/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/String2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/String2/String2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/Thread.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread/Thread/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/Thread2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Thread2/Thread2/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/While.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/Whele.Do while/While/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/WriteRead.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/persons.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/WriteRead/WriteRead/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/replaceAll.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lessons/replaceAll/replaceAll/src/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MVC 2 Fetch , Update,DELETE/WorkDB/src/main/java/com/example/workdb/servletAppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MVC/WorkDB/src/main/java/com/example/workdb/servletAppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WorkDB/src/main/java/com/example/workdb/servletAppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MVC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVC/WorkDB/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MVC/WorkDB/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVC/WorkDB/src/main/java/com/example/workdb/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MVC/WorkDB/src/main/java/com/example/workdb/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkDB/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WorkDB/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -370,6 +42,8 @@
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.All in WorkDB.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.WorkDB [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.WorkDB [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo [install].executor&quot;: &quot;Run&quot;,
@@ -389,10 +63,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -441,8 +115,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.WorkDbApplication" />
-        <item itemvalue="JUnit.All in WorkDB" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in WorkDB" />
       </list>
     </recent_temporary>
   </component>
@@ -471,6 +145,8 @@
       <workItem from="1759159077238" duration="204000" />
       <workItem from="1759170063548" duration="220000" />
       <workItem from="1759238431563" duration="4000" />
+      <workItem from="1759480737491" duration="6770000" />
+      <workItem from="1759507137212" duration="2711000" />
     </task>
     <servers />
   </component>
