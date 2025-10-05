@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+
+    <style>
+        table {
+            font-size: 30px;
+        }
+
+        a, button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 5px black;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .addAll {
+            background-color: green;
+        }
+
+        .clear {
+            background-color: red;
+        }
+
+
+        .edit {
+            background-color: orange;
+        }
+
+        .add {
+            background-color: blue;
+            color: white;
+        }
+
+
+        a, button {
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        #globalFilter,#sizeForm,select,option {
+            font-size: 25px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mypage {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .mypage:hover {
+            background-color: lightgray;
+        }
+
+        .mypage.active {
+            background-color: blue !important;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <a class="addAll" th:href="@{/api/teacher/addAuthor}">Add All</a>
+    <a class="clear" th:href="@{/api/teacher/clear}">Clear</a>
+    <a class="add" th:href="@{/api/teacher/add}">Add</a>
+    <input id="globalFilter" onkeyup="filterByName()" type="text" placeholder="🔍 Search teacher">
+</div>
+<hr>
+<div style="margin:5px;font-size: 25px">
+    <label><input type="radio" checked value="All" name="searchField">All</label>
+    <label><input type="radio" value="Id" name="searchField">Id</label>
+    <label><input type="radio" value="Name" name="searchField">Name</label>
+    <label><input type="radio" value="Surname" name="searchField">Surname</label>
+    <label><input type="radio" value="Email" name="searchField">Email</label>
+    <label><input type="radio" value="Age" name="searchField">Age</label>
+</div>
+<hr>
+<form   id="sizeForm" method="get" action="/api/teacher/list">
+    <label>Show per page: </label>
+    <select name="size" id="sizeSelect" onchange="document.querySelector('#sizeForm').submit()" >
+        <option th:selected="${size==5}" th:value="5">5</option>
+        <option th:selected="${size==10}" th:value="10">10</option>
+        <option th:selected="${size==20}" th:value="20">20</option>
+        <option th:selected="${size==30}" th:value="30">30</option>
+    </select>
+</form>
+<hr>
+<div th:class="pagination" th:if="${totalPages > 1}">
+    <span th:each="i : ${#numbers.sequence(startPage,endPage)}">
+        <a th:style="${i==currentPage} ? 'background-color: blue' : ''"
+           th:class="mypage"
+           th:text="${i}"
+           th:href="@{/api/teacher/list(page=${i},size=${size})}"></a>
+    </span>
+</div>
+<hr>
+<table th:if="${teachers.size()!=0}" border="1">
+    <thead>
+    <tr>
+        <th onclick="sortTable(0)">Id</th>
+        <th onclick="sortTable(1)">Name</th>
+        <th onclick="sortTable(2)">Surname</th>
+        <th onclick="sortTable(3)">Email</th>
+        <th onclick="sortTable(4)">Age</th>
+        <th>Btns</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="rows" th:each="t , status : ${teachers}" th:attr="data-id=${t.getId()}">
+        <td th:text="${t.getId()}"></td>
+        <td th:text="${t.getFirstName()}"></td>
+        <td th:text="${t.getLastName()}"></td>
+        <td th:text="${t.getEmail()}"></td>
+        <td th:text="${t.getAge()}"></td>
+        <td>
+            <div class="container">
+                <form name="test" class="del"
+                      th:action="@{/api/teacher/delete/{id}(id=${t.getId()})}" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button class="del" type="submit">Delete</button>
+                </form>
+                <a th:href="@{/api/teacher/edit/{id}(id=${t.getId()})}" class="edit ">Edit</a>
+                <a th:onclick="'deleteTeacher('+${t.getId()}+')'" class="edit ">Delete</a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h1 th:unless="${teachers.size()!=0}">Teachers empty</h1>
+
+
+<script>
+    function filterByName() {
+        let input = document.querySelector('#globalFilter');
+        let value = input.value.toLowerCase();
+        let selectedFields = document.querySelector('input[name="searchField"]:checked').value;
+
+        const fieldIndexMap = {
+            "All": 0,  "Id": 1,  "Name": 2, "Surname": 3,  "Email": 4, "Age": 5
+        }
+        console.log(selectedFields)
+        let columnIndex = fieldIndexMap[selectedFields];
+
+        let tbody = document.getElementsByTagName("tbody")[0];
+        let rows = Array.from(tbody.getElementsByTagName("tr"))
+
+        for (const row of rows) {
+            if (columnIndex == 0) {
+                let cells = row.getElementsByTagName("td");
+                let find = false;
+                for (const cell of cells) {
+                    if (cell.textContent.toLowerCase().includes(value)) {
+                        find = true;
+                        break;
+                    }
+                }
+                row.style.display = find ? '' : 'none';
+
+            } else {
+                let cell = row.getElementsByTagName("td")[columnIndex-1];
+                if (cell.textContent.toLowerCase().includes(value)) {
+                    row.style.display = '';
+
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+
+
+    }
+    async function deleteTeacher(id) {
+        console.log("Click deleteTeacher");
+        let response = await fetch(`/api/teacher/api/delete/${id}`, {method: 'DELETE'});
+        let text = await response.text();
+        console.log(text);
+
+        let row = document.querySelector(`tr[data-id='${id}']`);
+        row.remove();
+    }
+
+    async function searchAllParam() {
+        let input = document.querySelector('#globalFilter');
+        let value = input.value.toLowerCase();
+
+        let response = await fetch(`/api/teacher/api/filter/${value}`, {method: 'GET'});
+
+        if (response.ok) {
+            let results = await response.json();
+
+            if (results.length > 0) {
+                let tbody = document.getElementsByTagName("tbody")[0];
+                tbody.innerHTML = '';
+
+                for (let result of results) {
+                    let tr = document.createElement("tr");
+                    tr.className = 'rows';
+                    tr.dataset.id = result.id;
+                    tr.innerHTML = `
+                    <td>${result.id}</td>
+                    <td>${result.firstName}</td>
+                    <td>${result.lastName}</td>
+                    <td>${result.email}</td>
+                    <td>${result.age}</td>
+                    <td>
+                        <div class="container">
+                            <form name="test" class="del" action="/api/teacher/delete/${result.id}" method="post">
+                                <input type="hidden" name="_method" value="delete">
+                                <button class="del" type="submit">Delete</button>
+                            </form>
+                            <a href="/api/teacher/edit/${result.id}" class="edit">Edit</a>
+                            <a onclick="deleteTeacher(${result.id})" class="edit">Delete</a>
+                        </div>
+                    </td>
+                `;
+                    tbody.appendChild(tr);
+                }
+            }
+        }
+    }
+
+
+    let sortStates = {};
+
+    function sortTable(columIndex) {
+        let tbody = document.getElementsByTagName("tbody")[0];
+        let rows = Array.from(tbody.getElementsByTagName("tr"));
+        let headers = document.querySelectorAll("th")
+
+        let sortedRows = rows.sort((rowA, rowB) => {
+            let cellA = rowA.cells[columIndex].innerText.toLowerCase();
+            let cellB = rowB.cells[columIndex].innerText.toLowerCase();
+
+            let sortMult = sortStates[columIndex] == 'asc' ? -1 : 1;
+
+            if (!isNaN(cellA) && !isNaN(cellB)) {
+                return sortMult * (Number(cellA) - Number(cellB));
+            }
+
+            return sortMult * cellA.localeCompare(cellB);
+        });
+
+        for (const header of headers) {
+            let arr = header.innerText.split(' ');
+            header.innerText = arr[0];
+        }
+
+        if (sortStates[columIndex] == 'asc') {
+            sortStates[columIndex] = 'desc'
+            headers[columIndex].innerText += ' ⬇'
+        } else {
+            sortStates[columIndex] = 'asc'
+            headers[columIndex].innerText += ' ⬆'
+        }
+
+        sortedRows.forEach(row => {
+            tbody.appendChild(row);
+        })
+    }
+
+    sortTable(0);
+
+    function changePageSize() {
+        const size = document.querySelector('#sizeSelect').value;
+        window.location.href = `/api/teacher/list?size=${size}`;
+    }
+
+    function updatePagination(totalPages, currentPage) {
+        const pagination = document.querySelector('.pagination');
+        const pages = document.querySelectorAll('.mypage');
+
+
+        pagination.innerHTML = '';
+
+        for(let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.classList.add('mypage');
+            pageLink.textContent = i;
+            pageLink.href = `#`;
+
+            if(i === currentPage) {
+                pageLink.classList.add('active');
+            }
+
+            pageLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                loadTeachers(i, selectedSize);
+            });
+
+            pagination.appendChild(pageLink);
+        }
+    }
+
+    let selectedSize = 5;
+    document.querySelector('#sizeSelect').addEventListener('change', function() {
+        selectedSize = parseInt(this.value);
+        loadTeachers(1, selectedSize);
+    });
+
+    async function loadTeachers(page, size) {
+        try {
+            const response = await fetch(`/api/teacher/list?page=${page}&size=${size}`);
+            const data = await response.json();
+
+            const tbody = document.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            addRowsToTable(data.teachers);
+
+            updatePagination(data.totalPages, page);
+
+        } catch (error) {
+            console.error('Ошибка при загрузке данных:', error);
+        }
+    }
+
+    function addRowsToTable(teachers) {
+        const tbody = document.querySelector('tbody');
+
+        teachers.forEach(teacher => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+            <td>${teacher.id}</td>
+            <td>${teacher.firstName}</td>
+            <td>${teacher.lastName}</td>
+            <td>${teacher.email}</td>
+            <td>${teacher.age}</td>
+            <td>
+
+            </td>
+        `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function addNewRows() {
+        const tbody = document.querySelector('tbody');
+        const currentRows = tbody.children.length;
+        const newRowsCount = selectedSize - currentRows;
+
+        if (newRowsCount > 0) {
+            for(let i = 0; i < newRowsCount; i++) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                <td>Новый</td>
+                <td>Учитель</td>
+                <td>#${i + 1}</td>
+                <td>new@example.com</td>
+                <td>25</td>
+                <td>
+
+                </td>
+            `;
+                tbody.appendChild(tr);
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentPage = parseInt(urlParams.get('page')) || 1;
+        selectedSize = parseInt(urlParams.get('size')) || 5;
+
+        loadTeachers(currentPage, selectedSize);
+
+        document.querySelector('#sizeSelect').addEventListener('input', addNewRows);
+    });
+
+</script>
+</body>
+</html>

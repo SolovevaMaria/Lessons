@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+
+    <style>
+        .form-error {border: red solid 3px}
+        .error {color: red;}
+        .okey {color: green;}
+    </style>
+</head>
+<body>
+<h1>Create Teacher</h1>
+
+
+<div th:if="${error}" class="error" th:text="${error}">
+
+</div>
+
+<form th:action="@{/api/teacher/add}" th:object="${teacher}" method="post">
+    <span>Firstname : </span>
+    <input type="text" th:field="*{firstName}" th:class="${#fields.hasErrors('firstName')} ? 'form-error' : 'okey'">
+   <div th:if="${#fields.hasErrors('firstName')}" th:class="error">
+       <span th:errors="*{firstName}"></span>
+   </div>
+    <br>
+
+    <span>Latstname : </span>
+    <input type="text" th:field="*{lastName}"
+           th:class="${#fields.hasErrors('lastName')} ? 'form-error' : 'okey'">
+    <div th:if="${#fields.hasErrors('lastName')}" th:class="error">
+        <span th:errors="*{lastName}"></span>
+    </div>
+    <br>
+
+    <span>Email : </span>
+    <input type="email" th:field="*{email}"
+           th:class="${#fields.hasErrors('email')} ? 'form-error' : 'okey'">
+    <div th:if="${#fields.hasErrors('email')}" th:class="error">
+        <span th:errors="*{email}"></span>
+    </div>
+    <br>
+
+    <span>Age : </span>
+    <input type="number" th:field="*{age}"
+           th:class="${#fields.hasErrors('age')} ? 'form-error' : 'okey'">
+    <div th:if="${#fields.hasErrors('age')}" th:class="error">
+        <span th:errors="*{age}"></span>
+    </div>
+    <br>
+
+    <button type="submit">Save</button>
+    <a class="add" th:href="@{/api/teacher/list}">Cancel</a>
+</form>
+
+
+<!--private String firstName;-->
+<!--private String lastName;-->
+<!--private Integer age;-->
+</body>
+</html>
