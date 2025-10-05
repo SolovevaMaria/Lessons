@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+
+    <style>
+        table {
+            font-size: 30px;
+        }
+
+        a, button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 5px black;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .addAll {
+            background-color: green;
+        }
+
+        .clear {
+            background-color: red;
+        }
+
+
+        .edit {
+            background-color: orange;
+        }
+
+        .add {
+            background-color: blue;
+            color: white;
+        }
+
+
+        a, button {
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a class="addAll" th:href="@{/api/teacher/addAuthor}">Add All</a>
+    <a class="clear" th:href="@{/api/teacher/clear}">Clear</a>
+    <a class="add" th:href="@{/api/teacher/add}">Add</a>
+</div>
+<hr>
+<table th:if="${teachers.size()!=0}" border="1">
+    <thead>
+    <tr>
+        <th onclick="sortTable(0)">Id</th>
+        <th onclick="sortTable(1)">Name</th>
+        <th onclick="sortTable(2)">Surname</th>
+        <th onclick="sortTable(3)">Age</th>
+        <th>Btns</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="rows" th:each="t , status : ${teachers}" th:attr="data-id=${t.getId()}">
+        <td th:text="${t.getId()}"></td>
+        <td th:text="${t.getFirstName()}"></td>
+        <td th:text="${t.getLastName()}"></td>
+        <td th:text="${t.getAge()}"></td>
+        <td>
+            <div class="container">
+
+                <form name="test"   class="del"
+                      th:action="@{/api/teacher/delete/{id}(id=${t.getId()})}" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button class="del" type="submit">Delete</button>
+                </form>
+                <a th:href="@{/api/teacher/edit/{id}(id=${t.getId()})}" class="edit ">Edit</a>
+                <a th:onclick="'deleteTeacher('+${t.getId()}+')'" class="edit ">Delete</a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h1 th:unless="${teachers.size()!=0}">Teachers empty</h1>
+
+<script>
+    async function fetchData(url, method = 'GET', body = null) {
+        try {
+            const response = await fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body ? JSON.stringify(body) : null
+            });
+
+            if (!response.ok) {
+                throw new Error(`Ошибка: ${response.statusText}`);
+            }
+
+            return await response.json();
+        } catch (error) {
+            console.error('Ошибка:', error);
+            alert('Произошла ошибка при выполнении запроса');
+        }
+    }
+
+    async function deleteTeacher(id) {
+        try {
+            const response = await fetch(`/api/teacher/edit/{id}(id=${t.getId()})}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok) {
+                const text = await response.text();
+                console.log(text);
+
+                const row = document.querySelector(`tr[data-id='${id}']`);
+                if (row) {
+                    row.remove();
+                }
+            } else {
+                throw new Error('Ошибка при удалении');
+            }
+        } catch (error) {
+            console.error('Ошибка при удалении учителя:', error);
+            alert('Не удалось удалить учителя');
+        }
+    }
+
+    async function addAllTeachers() {
+        try {
+            await fetchData('/api/teacher/addAuthor', 'POST');
+            await reloadTable();
+        } catch (error) {
+            console.error('Ошибка при добавлении всех учителей:', error);
+        }
+    }
+
+    async function clearTeachers() {
+        if (confirm('Вы уверены, что хотите очистить все данные?')) {
+            try {
+                await fetchData('/api/teacher/clear', 'DELETE');
+                await reloadTable();
+            } catch (error) {
+                console.error('Ошибка при очистке данных:', error);
+            }
+        }
+    }
+
+    async function addTeacher() {
+        try {
+            await fetchData('/api/teacher/add', 'POST');
+            await reloadTable();
+        } catch (error) {
+            console.error('Ошибка при добавлении учителя:', error);
+        }
+    }
+
+    async function editTeacher(id) {
+        try {
+            window.location.href = `/api/teacher/edit/${id}`;
+        } catch (error) {
+            console.error('Ошибка при редактировании учителя:', error);
+        }
+    }
+
+    async function reloadTable() {
+        try {
+            const response = await fetch('/api/teacher/get');
+            const data = await response.json();
+
+            const tbody = document.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            data.forEach(teacher => {
+                const row = document.createElement('tr');
+                row.setAttribute('data-id', teacher.id);
+
+                row.innerHTML = `
+                <td>${teacher.id}</td>
+                <td>${teacher.firstName}</td>
+                <td>${teacher.lastName}</td>
+                <td>${teacher.age}</td>
+                <td>
+                    <div class="container">
+                        <button class="del clear" onclick="deleteTeacher(${teacher.id})">Удалить</button>
+                        <button class="edit" onclick="editTeacher(${teacher.id})">Редактировать</button>
+                    </div>
+                </td>
+            `;
+                tbody.appendChild(row);
+            });
+            sortTable(0);
+        } catch (error) {
+            console.error('Ошибка при загрузке данных:', error);
+            alert('Не удалось загрузить данные');
+        }
+    }
+
+    let sortStates = {};
+
+    function sortTable(columIndex) {
+        let tbody = document.getElementsByTagName("tbody")[0];
+        let rows = Array.from(tbody.getElementsByTagName("tr"));
+        let headers = document.querySelectorAll("th");
+
+        let sortedRows = rows.sort((rowA, rowB) => {
+            let cellA = rowA.cells[columIndex].innerText.toLowerCase();
+            let cellB = rowB.cells[columIndex].innerText.toLowerCase();
+
+            let sortMult = sortStates[columIndex] == 'asc' ? -1 : 1;
+
+            if (!isNaN(cellA) && !isNaN(cellB)) {
+                return sortMult * (Number(cellA) - Number(cellB));
+            }
+
+            return sortMult * cellA.localeCompare(cellB);
+        });
+
+        for (const header of headers) {
+            let arr = header.innerText.split(' ');
+            header.innerText = arr[0];
+        }
+
+        if (sortStates[columIndex] == 'asc') {
+            sortStates[columIndex] = 'desc';
+            headers[columIndex].innerText += ' ⬇';
+        } else {
+            sortStates[columIndex] = 'asc';
+            headers[columIndex].innerText += ' ⬆';
+        }
+
+        sortedRows.forEach(row => {
+            tbody.appendChild(row);
+        });
+    }
+
+    try {
+        sortTable(0);
+    } catch (error) {
+        console.error('Ошибка при сортировке:', error);
+    }
+
+</script>
+</body>
+</html>
