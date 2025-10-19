@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Библиотека | Управление книгами</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background-gradient"></div>
+<div class="container">
+    <header class="main-header">
+        <div class="header-content">
+            <h1>📚 Библиотека</h1>
+            <p>Управляйте вашей коллекцией книг с легкостью</p>
+        </div>
+        <div class="header-decoration">
+            <div class="decoration-book"></div>
+            <div class="decoration-book"></div>
+            <div class="decoration-book"></div>
+        </div>
+    </header>
+
+    <!-- Статистика -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📖</div>
+                <div class="stat-content">
+                    <div class="stat-number" id="totalBooks">0</div>
+                    <div class="stat-label">Всего книг</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎭</div>
+                <div class="stat-content">
+                    <div class="stat-number" id="totalGenres">0</div>
+                    <div class="stat-label">Жанров</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✍️</div>
+                <div class="stat-content">
+                    <div class="stat-number" id="totalAuthors">0</div>
+                    <div class="stat-label">Авторов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сообщения -->
+    <div class="messages-container">
+        <div id="loading" class="loading-message" style="display: none;">
+            <div class="spinner"></div>
+            <span>Загрузка...</span>
+        </div>
+        <div id="error" class="error-message" style="display: none;"></div>
+        <div id="success" class="success-message" style="display: none;"></div>
+    </div>
+
+    <!-- Форма добавления/редактирования книги -->
+    <section class="form-section glass-card">
+        <div class="section-header">
+            <h2 id="formTitle">📝 Добавить новую книгу</h2>
+            <div class="section-actions">
+                <button type="button" id="clearFormBtn" class="btn btn-outline">
+                    <span>🗑️ Очистить</span>
+                </button>
+            </div>
+        </div>
+        <form id="bookForm" class="book-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="title" class="form-label">
+                        <span class="label-text">Название книги</span>
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" id="title" class="form-input" required placeholder="Введите название книги">
+                </div>
+
+                <div class="form-group">
+                    <label for="author" class="form-label">
+                        <span class="label-text">Автор</span>
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" id="author" class="form-input" required placeholder="Введите автора">
+                </div>
+
+                <div class="form-group">
+                    <label for="isbn" class="form-label">ISBN</label>
+                    <input type="text" id="isbn" class="form-input" placeholder="978-3-16-148410-0">
+                </div>
+
+                <div class="form-group">
+                    <label for="publicationYear" class="form-label">Год издания</label>
+                    <input type="number" id="publicationYear" class="form-input"
+                           min="1000" max="2030" placeholder="2024">
+                </div>
+
+                <div class="form-group">
+                    <label for="genre" class="form-label">Жанр</label>
+                    <input type="text" id="genre" class="form-input" placeholder="Фантастика, Роман, Детектив...">
+                </div>
+
+                <div class="form-group">
+                    <label for="publisher" class="form-label">Издательство</label>
+                    <input type="text" id="publisher" class="form-input" placeholder="Название издательства">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="pageCount" class="form-label">Количество страниц</label>
+                    <input type="number" id="pageCount" class="form-input" min="1" placeholder="320">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="form-label">Описание</label>
+                <textarea id="description" class="form-textarea" placeholder="Краткое описание книги..." rows="4"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                    <span class="btn-icon">➕</span>
+                    <span class="btn-text">Добавить книгу</span>
+                </button>
+                <button type="button" id="cancelBtn" class="btn btn-secondary" style="display: none;">
+                    <span class="btn-icon">↩️</span>
+                    <span class="btn-text">Отмена</span>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Поиск и фильтрация -->
+    <section class="search-section glass-card">
+        <div class="section-header">
+            <h2>🔍 Поиск книг</h2>
+            <div class="section-actions">
+                <button type="button" id="showAllBtn" class="btn btn-outline">
+                    <span>📚 Все книги</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="search-grid">
+            <div class="search-group">
+                <label for="searchAuthor" class="search-label">По автору</label>
+                <div class="search-input-group">
+                    <input type="text" id="searchAuthor" class="search-input" placeholder="Имя автора">
+                    <button type="button" id="searchAuthorBtn" class="btn btn-search">
+                        <span>🔎</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-group">
+                <label for="searchTitle" class="search-label">По названию</label>
+                <div class="search-input-group">
+                    <input type="text" id="searchTitle" class="search-input" placeholder="Название книги">
+                    <button type="button" id="searchTitleBtn" class="btn btn-search">
+                        <span>🔎</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-group">
+                <label for="searchGenre" class="search-label">По жанру</label>
+                <div class="search-input-group">
+                    <select id="searchGenre" class="search-select">
+                        <option value="">Выберите жанр</option>
+                    </select>
+                    <button type="button" id="searchGenreBtn" class="btn btn-search">
+                        <span>🔎</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-actions">
+            <button type="button" id="loadGenresBtn" class="btn btn-outline">
+                <span>🔄 Обновить жанры</span>
+            </button>
+            <button type="button" id="refreshBtn" class="btn btn-outline">
+                <span>🔄 Обновить список</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Список книг -->
+    <section class="books-section">
+        <div class="section-header">
+            <h2>📚 Каталог книг <span class="books-count" id="booksCount">0</span></h2>
+            <div class="section-actions">
+                <button type="button" id="refreshListBtn" class="btn btn-primary">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Обновить</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="booksList" class="books-grid">
+            <!-- Книги будут загружены здесь -->
+        </div>
+    </section>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
